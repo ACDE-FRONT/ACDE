@@ -1,0 +1,27 @@
+.detail{
+    padding: 1%;
+    padding-top: 0;
+}
+
+table {
+    border: 1px solid var(--dark_blue);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid var(--black);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(1) {
+    background-color: var(--dark_blue);
+    border: 1px solid var(--dark_blue);
+    color: var(--white);
+}
+
+th{
+    border: 1px solid var(--white); 
+}

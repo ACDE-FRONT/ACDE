@@ -1,0 +1,13 @@
+.nav_bar{
+    padding: 1%;
+}
+
+.nav_bar h1{
+    color: var(--dark_blue);
+    font-weight: 900;
+}
+
+.nav_bar h1 span{
+    color: var(--black);
+    font-weight: 300;
+}
