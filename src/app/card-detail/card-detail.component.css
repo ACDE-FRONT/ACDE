@@ -1,0 +1,18 @@
+.main{
+    height: 100%;
+}
+
+fieldset{
+    padding: 2%;
+    height: 100%;
+}
+
+.left{
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 13px;
+}
+
+span{
+    font-weight: bold;
+}

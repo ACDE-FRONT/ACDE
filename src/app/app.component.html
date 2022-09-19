@@ -11,36 +11,45 @@
   </form>
 </div>
 
-<div class="detail">
-  <h3>Purchase Offer: {{po_n}}</h3>
-  {{console.log(po_n)}}
-  <table>
-    <tr>
-      <th>Line</th>
-      <th>Our Code</th>
-      <th>Item</th>
-      <th>Unit</th>
-      <th>Quantity</th>
-      <th>Unit Price</th>
-      <th>Total Price</th>
-      <th>Comment By Supplier</th>
-      <th>Delivery Exception</th>
-    </tr>
-
-
-    
-    <tr *ngFor="let card of po_s[0]">
-      <td>{{card.Line_Number}}</td>
-      <td>{{card.Item_Code}}</td>
-      <td>{{card.Item_Description}}</td>
-      <td>{{card.unit}}</td>
-      <td>{{card.quantity}}</td>
-      <td>{{card.unit_price}}</td>
-      <td>{{card.total_price}}</td>
-      <td>{{card.cbs}}</td>
-      <td>{{card.de}}</td>
-    </tr>
-
-
-  </table>
+<div [ngClass]="state">
+  <h3>Purchase Offer: <span>{{po_n}}</span></h3>
+  <div class="cards">
+    <div class="card" *ngFor="let item of big">
+      <app-card-detail legend = {{item.legend}} [left]=item.data ></app-card-detail>
+    </div>
+  </div>
+  <div [ngClass]="btn_state">
+    <button type="button" (click)="showDetail()">GET ORDER DETAILS</button>
+  </div>
+  <div [ngClass]="detail">
+    <table>
+      <tr>
+        <th>Line</th>
+        <th>Our Code</th>
+        <th>Item</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+        <th>Comment By Supplier</th>
+        <th>Delivery Exception</th>
+      </tr>
+  
+  
+      
+      <tr *ngFor="let card of po_s[0]">
+        <td>{{card.Line_Number}}</td>
+        <td>{{card.Item_Code}}</td>
+        <td>{{card.Item_Description}}</td>
+        <td>{{card.Unit}}</td>
+        <td>{{card.Quantity}}</td>
+        <td>{{card.Unit_Cost}}</td>
+        <td>{{card.Total_Cost}}</td>
+        <td>{{card.Comment_By_Purchasing}}</td>
+        <td>{{card.de}}</td>
+      </tr>
+  
+  
+    </table>
+  </div>
 </div>

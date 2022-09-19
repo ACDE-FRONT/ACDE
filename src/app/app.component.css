@@ -3,6 +3,19 @@
     padding-top: 0;
 }
 
+.block{
+    display: none;
+}
+
+.detail h3{
+    padding-bottom: 2%;
+    font-size: 25px;
+}
+
+.detail h3 span{
+    color: var(--dark_blue);
+}
+
 table {
     border: 1px solid var(--dark_blue);
     border-collapse: collapse;
@@ -24,4 +37,32 @@ tr:nth-child(1) {
 
 th{
     border: 1px solid var(--white); 
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 1%;
+}
+
+.card{
+    padding: 5%;
+    padding-left: 0;
+}
+
+.show button{
+    width: 20%;
+    margin: 1%;
+    margin-bottom: 1%;
+    margin-left: 0;
+    padding: 1%;
+    border: 0;
+    background-color: var(--dark_blue);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.unshow{
+    display: none;
 }

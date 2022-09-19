@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { DetailComponent } from './detail/detail.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailComponent,
-    NavBarComponent
+    NavBarComponent,
+    CardDetailComponent
   ],
   imports: [
     BrowserModule,
