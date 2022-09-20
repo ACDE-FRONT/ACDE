@@ -9,7 +9,7 @@ export class DetailService {
 
   constructor (private httpClient: HttpClient) {}
 
-  getDetails (link?: any, po_s?: any, po_n?: any, big?: any) {
+  getDetails (link?: any) {
     return this.httpClient.get(this.detailUrl + link)
   }
 }

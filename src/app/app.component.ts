@@ -35,63 +35,65 @@ export class AppComponent {
             legend: 'Purchase Order',
             data: [
               { name: 'PO Number', val: this.po_n },
-              { name: 'From', val: this.po_s[0][0].Company },
-              { name: 'For', val: this.po_s[0][0].Destination },
-              { name: 'Final Delivery', val: 'Unknown' },
-              { name: 'Date of order', val: this.po_s[0][0].Delivery_Date }
+              { name: 'Revision', val: this.po_s[0][9].PO_REVISIONS },
+              { name: 'From', val: this.po_s[0][9].COMPANY_NAME },
+              { name: 'For', val: this.po_s[0][9].ORG_UNIT_DESTINATION_NAME },
+              { name: 'Final Delivery', val: '' },
+              { name: 'Date of order', val: this.po_s[0][0].PO_SENT_DATE },
+              { name: 'Delivery Status', val: this.po_s[0][9].PO_DOC_STATUS }
             ]
           },
-          { legend: 'Vendor', data: [{ name: 'Vendor', val: 'Unknown' }] },
+          { legend: 'Vendor', data: [{ name: 'Vendor', val: this.po_s[0][9].VENDOR_ADDRESS_1 }] },
           {
             legend: 'From',
             data: [
-              { name: 'Requested By', val: this.po_s[0][0].Company },
-              { name: 'Phone', val: 'Unknown' },
-              { name: 'Fax', val: 'Unknown' },
-              { name: 'Email', val: 'Unknown' }
+              { name: 'Requested By', val: this.po_s[0][9].DOC_OWNER_NAME },
+              { name: 'Phone', val: '' },
+              { name: 'Fax', val: '' },
+              { name: 'Email', val: '' }
             ]
           },
           {
             legend: 'Vendor Contact',
             data: [
-              { name: 'Attention', val: 'Unknown' },
-              { name: 'Phone', val: 'Unknown' },
-              { name: 'Fax', val: 'Unknown' },
-              { name: 'Email', val: 'Unknown' }
+              { name: 'Attention', val: this.po_s[0][9].CONTACT_NAME },
+              { name: 'Phone', val: '' },
+              { name: 'Fax', val: '' },
+              { name: 'Email', val: this.po_s[0][9].SEND_TO_CONTACT_EMAIL }
             ]
           },
           {
             legend: 'Terms',
             data: [
-              { name: 'Currency', val: 'Unknown' },
-              { name: 'Payment Terms', val: 'Unknown' },
-              { name: 'Freight Terms', val: 'Unknown' },
-              { name: 'Freight Charges', val: 'Unknown' }
+              { name: 'Currency', val: this.po_s[0][9].CURRENCY_NAME },
+              { name: 'Payment Terms', val: this.po_s[0][9].PAYMENT_TERMS },
+              { name: 'Freight Terms', val: this.po_s[0][9].FOB },
+              { name: 'Freight Charges', val: '' }
             ]
           },
           {
             legend: 'Delivery Detail',
             data: [
-              { name: 'Shiping Method', val: 'Unknown' },
-              { name: 'Deliver', val: 'Unknown' },
-              { name: 'Delivery Place', val: this.po_s[0][0].Delivery_Place },
-              { name: 'Attention', val: 'Unknown' }
+              { name: 'Shiping Method', val: this.po_s[0][9].DELIVERY_ADDRESS_1 },
+              { name: 'Deliver', val: this.po_s[0][9].DELIVERY_INSTRUCTIONS },
+              { name: 'Delivery Place', val: this.po_s[0][9].Delivery_Place },
+              { name: 'Attention', val: this.po_s[0][9].INVOICE_ADDRESS_5 }
             ]
           },
           {
             legend: 'Send Invoice To',
             data: [
-              { name: 'Invoice', val: 'Unknown' },
-              { name: 'Mailing', val: 'Unknown' },
-              { name: 'Address', val: 'Unknown' }
+              { name: 'Invoice', val: this.po_s[0][9].INVOICE_ADDRESS_1 },
+              { name: 'Mailing', val: this.po_s[0][9].INVOICE_ADDRESS_3 },
+              { name: 'Address', val: this.po_s[0][9].INVOICE_ADDRESS_3  + this.po_s[0][9].INVOICE_ADDRESS_4 }
             ]
           },
           {
             legend: 'Delivery Address',
             data: [
-              { name: 'Deliver', val: 'Unknown' },
-              { name: 'Goods', val: 'Unknown' },
-              { name: 'to', val: 'Unknown' }
+              { name: 'Deliver', val: this.po_s[0][9].DELIVER_GOODS_BY_DESCRIPTION },
+              { name: 'Goods', val: '' },
+              { name: 'to', val: '' }
             ]
           }
         )
