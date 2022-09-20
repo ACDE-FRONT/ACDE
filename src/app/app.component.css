@@ -66,3 +66,13 @@ th{
 .unshow{
     display: none;
 }
+
+.error{
+    padding: 1%;
+    padding-top: 0%;
+}
+
+.error p{
+    color: var(--red);
+    font-weight: 600;
+}

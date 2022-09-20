@@ -1,6 +1,5 @@
 <router-outlet></router-outlet>
 <app-nav-bar></app-nav-bar>
-
 <div class="link_capture">
   <form>
     <fieldset>
@@ -9,6 +8,11 @@
       <button type="button" (click)="clickme()">SUBMIT</button>
     </fieldset>
   </form>
+</div>
+
+<div class="error">
+  <p>{{error_val}}</p>
+  <!-- {{console.log(po_s)}} -->
 </div>
 
 <div [ngClass]="state">
@@ -48,8 +52,10 @@
         <td>{{card.Comment_By_Purchasing}}</td>
         <td>{{card.de}}</td>
       </tr>
-  
-  
     </table>
+
+    <div [ngClass]="btn_state2">
+      <button type="button" (click)="hideDetail()">HIDE ORDER DETAILS</button>
+    </div>
   </div>
 </div>
